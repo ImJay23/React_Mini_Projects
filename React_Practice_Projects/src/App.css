@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.page-contaier{
+    @apply m-0 flex min-w-[320px] h-screen p-5
+}

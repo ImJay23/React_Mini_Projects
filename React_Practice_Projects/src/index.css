@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply m-0 flex min-w-[320px] min-h-screen flex-col text-black antialiased font-sans leading-relaxed font-normal;
+  }
+
+  button {
+    @apply cursor-pointer transition duration-200 ease-in-out transform active:scale-101;
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed opacity-70;
+  }
+
+  input {
+    @apply p-2 rounded-sm bg-white text-[#2d2d2d] border-2 border-transparent;
+  }
+
+  input:focus {
+    @apply outline-0 border-gray-100 ring-2 ring-gray-400;
+  }
+
+  select {
+    @apply p-2 rounded-sm bg-white text-[#2d2d2d] border-2 border-transparent;
+  }
+
+  select:focus {
+    @apply outline-0 border-gray-100 ring-2 ring-gray-400;
+  }
+
+  option {
+    @apply bg-white text-gray-800;
+  }
+
+  option:checked {
+    @apply bg-blue-100 text-blue-950;
+  }
+
+  option:hover {
+    /* Not all browsers support hover on <option> */
+    @apply bg-gray-100;
+  }
+}
