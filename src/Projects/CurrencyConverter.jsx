@@ -61,7 +61,7 @@ const CurrencyConverter = ()=>{
     }
 
     const handleSwap = ()=>{
-        setConvertAmt(convertToAmt)
+        setConvertAmt(convertToAmt || 1)
         SetConvertFrom(convertTo)
         setConverToAmt(convertAmt)
         SetConvertTo(convertFrom)
