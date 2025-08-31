@@ -89,7 +89,7 @@ const CurrencyConverter = ()=>{
                 convertToAmt={convertToAmt}
                 oppositType = {convertFrom}
                 />
-                <button type="button" onClick={handleConvert} className="bg-blue-500 text-white font-semibold rounded-md p-2 mt-2 hover:bg-blue-700">
+                <button disabled={!convertAmt} type="button" onClick={handleConvert} className="bg-blue-500 text-white font-semibold rounded-md p-2 mt-2 hover:bg-blue-700">
                     Convert {convertFrom} to {convertTo}
                 </button>
             </div>
