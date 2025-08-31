@@ -1,5 +1,7 @@
-@reference "tailwindcss";
-
 .page-contaier{
-    @apply m-0 flex min-w-[320px] h-screen p-5
+    @apply h-full flex flex-col
+}
+
+.bg-img-manager{
+    @apply bg-cover bg-center bg-no-repeat bg-fixed
 }

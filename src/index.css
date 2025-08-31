@@ -1,12 +1,27 @@
 @import "tailwindcss";
 
+@theme {
+  /* default = light */
+  --color-app-bg: @apply bg-[linear-gradient(-135deg,#eff6ff_0%,#f5f3ff_30%,#cbd5e1_60%,#94a3b8)];
+  --color-app-text-color: #0a0a0a;
+}
+
+@layer theme {
+  :root, :host {
+    @variant dark {
+      --color-app-bg: #0a0a0a;
+      --color-app-text-color: #ffffff;
+    }
+  }
+}
+
 @layer base {
   body {
-    @apply m-0 flex min-w-[320px] min-h-screen flex-col text-black antialiased font-sans leading-relaxed font-normal;
+    @apply text-black antialiased;
   }
 
   button {
-    @apply cursor-pointer transition duration-200 ease-in-out transform active:scale-101;
+    @apply cursor-pointer transition duration-200 ease-in-out transform active:scale-101 hover:brightness-110;
   }
 
   button:disabled {
@@ -14,15 +29,15 @@
   }
 
   input {
-    @apply p-2 rounded-sm bg-white text-[#2d2d2d] border-2 border-transparent;
+    @apply p-2 rounded-sm text-[#1b1a1a] bg-gray-200;
   }
 
   input:focus {
-    @apply outline-0 border-gray-100 ring-2 ring-gray-400;
+    @apply outline-0 border-0 ring-2 ring-offset-2 ring-gray-600 ring-offset-white;
   }
 
   select {
-    @apply p-2 rounded-sm bg-white text-[#2d2d2d] border-2 border-transparent;
+    @apply p-2 rounded-sm bg-white text-[#2d2d2d] border-2 border-transparent min-w-24;
   }
 
   select:focus {
@@ -40,5 +55,29 @@
   option:hover {
     /* Not all browsers support hover on <option> */
     @apply bg-gray-100;
+  }
+
+  h1 {
+    @apply text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl font-medium;
+  }
+
+  h5 {
+    @apply text-xl font-medium;
+  }
+
+  h6 {
+    @apply text-lg font-medium;
   }
 }

@@ -5,8 +5,8 @@ const CurrencySelectorCard = ({label, convertFrom='USD', convertTo, currencyOpti
     return(
     <div className="border-white border-2 rounded-xl p-3 font-semibold text-gray-600">
         <div className="flex items-center justify-between gap-2 lg:gap-32 mb-0.5">
-        <lable>{label}</lable>
-        <lable>Currency Type</lable>
+        <label>{label}</label>
+        <label>Currency Type</label>
         </div>
         <div className="flex items-center justify-between gap-2 lg:gap-32">
             <input
@@ -67,7 +67,7 @@ const CurrencyConverter = ()=>{
         SetConvertTo(convertFrom)
     }
     return(
-        <div className="page-contaier justify-center items-center bg-[url('https://images.pexels.com/photos/3943746/pexels-photo-3943746.jpeg')] bg-cover bg-center bg-no-repeat">
+        <div className="page-contaier justify-center items-center bg-[url('https://images.pexels.com/photos/5921122/pexels-photo-5921122.jpeg')] bg-img-manager">
             <div className="flex flex-col gap-3 bg-transparent h-fit w-full md:w-1/2 p-8 backdrop-blur-sm rounded-xl relative border-white border-2">
                 <CurrencySelectorCard
                 label={'From'}
@@ -79,7 +79,7 @@ const CurrencyConverter = ()=>{
                 handleAmtChange={setConvertAmt}
                 />
                 <button onClick={handleSwap} className="bg-blue-500 text-white font-semibold rounded-md px-2 py-0.5 hover:bg-blue-700 w-fit absolute top-[123px] left-1/2 -translate-x-1/2">
-                    Swap <i class="fa-solid fa-up-down"></i>
+                    Swap <i className="fa-solid fa-up-down"></i>
                 </button>
                 <CurrencySelectorCard
                 label={'To'}

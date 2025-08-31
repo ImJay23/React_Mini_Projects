@@ -1,14 +1,10 @@
 import './App.css'
-import BackgroundChanger from './Projects/BackgroundChanger'
-import CurrencyConverter from './Projects/CurrencyConverter'
-import PasswordGenerator from './Projects/PasswordGenerator'
+import AppRouter from './Router/AppRouter'
 
 function App() {
   return (
     <>
-      {/* <BackgroundChanger/> */}
-      {/* <PasswordGenerator/> */}
-      <CurrencyConverter/>
+      <AppRouter/>
     </>
   )
 }
