@@ -37,6 +37,7 @@ const PasswordGenerator = () => {
     return (
         <div className='page-contaier items-center justify-center bg-[url("https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg")] bg-img-manager'>
             <div className='p-4 backdrop-blur-sm border-white border-2 w-full md:w-[60%] rounded-xl h-fit'>
+                <label className='text-gray-400 mb-1 inline-block'>Generated Password:</label>
                 <div className='flex gap-0.5 items-center h-[40px]'>
                     <input
                         className='py-1 px-2 w-full h-full rounded-l-sm rounded-r-none text-black'
