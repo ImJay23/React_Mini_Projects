@@ -1,4 +1,4 @@
-.page-container{
+/* .page-container{
     flex: 1;
     display: flex;
     align-items: center;
@@ -19,4 +19,35 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover; 
+} */
+@reference "./index.css";
+
+@layer utilities {
+    .page-container {
+        @apply flex-1 flex items-center justify-center p-6;
+    }
+
+    .app-bg {
+        background: var(--color-app-bg);
+    }
+
+    .header-bg {
+        background: var(--color-header-bg);
+    }
+
+    .bg-img-manager {
+        @apply bg-no-repeat bg-fixed bg-center bg-cover;
+    }
+
+    .input-wrapper {
+        @apply flex items-center h-[40px] rounded-sm;
+    }
+
+    .input-wrapper:focus-within {
+        @apply outline-none ring-2 ring-offset-2 ring-blue-500 ring-offset-white dark:ring-blue-400 dark:ring-offset-gray-900;
+    }
+
+    .input-wrapper>input:first-of-type {
+        @apply outline-none ring-0 ring-offset-0;
+    }
 }
