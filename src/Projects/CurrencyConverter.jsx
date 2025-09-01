@@ -79,7 +79,7 @@ const CurrencyConverter = ()=>{
                 oppositType = {convertTo}
                 handleAmtChange={setConvertAmt}
                 />
-                <button onClick={handleSwap} className="bg-blue-500 text-white font-semibold rounded-md px-2 py-0.5 hover:bg-blue-700 w-fit absolute top-[123px] left-1/2 -translate-x-1/2 flex items-center gap-1">
+                <button onClick={handleSwap} className="bg-blue-500 text-white font-semibold rounded-md px-2 py-0.5 hover:bg-blue-700 w-fit absolute top-[118px] left-1/2 -translate-x-1/2 flex items-center gap-1">
                     Swap <ArrowUpDown className="h-5 w-5"/>
                 </button>
                 <CurrencySelectorCard
