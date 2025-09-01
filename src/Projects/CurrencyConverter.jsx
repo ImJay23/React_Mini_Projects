@@ -67,7 +67,7 @@ const CurrencyConverter = ()=>{
         SetConvertTo(convertFrom)
     }
     return(
-        <div className="page-contaier justify-center items-center bg-[url('https://images.pexels.com/photos/5921122/pexels-photo-5921122.jpeg')] bg-img-manager">
+        <div className="page-container justify-center items-center bg-[url('https://images.pexels.com/photos/5921122/pexels-photo-5921122.jpeg')] bg-img-manager">
             <div className="flex flex-col gap-3 bg-transparent h-fit w-full md:w-1/2 p-8 backdrop-blur-sm rounded-xl relative border-white border-2">
                 <CurrencySelectorCard
                 label={'From'}

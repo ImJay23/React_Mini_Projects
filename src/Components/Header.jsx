@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const Header = () => {
     return (
-        <header className="h-[75px] w-full bg-gray-300/50 backdrop-blur-md fixed top-0 z-50 flex items-center justify-around">
+        <header className="fixed top-0 left-0 right-0 h-16 header-bg px-5 shadow-md z-10 flex items-center justify-between box-border">
 
             <h1 className="font-extrabold text-cyan-950">Just<span className="text-orange-500">JD</span></h1>
 

@@ -4,13 +4,15 @@ import Header from "../Components/Header"
 
 const AppLayout = () => {
     return (
-        <div className="w-full max-w-screen overflow-x-hidden">
-            <div className="h-[100vh] flex flex-col relative pt-[75px]">
-                <Header />
+        <>
+        <div className="min-h-screen overflow-x-hidden">
+            <Header />
+            <div className="h-screen flex flex-col pt-16">
                 <Outlet />
             </div>
             <Footer />
         </div>
+        </>
     )
 }
 

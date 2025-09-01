@@ -1,83 +1,105 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  /* default = light */
-  --color-app-bg: @apply bg-[linear-gradient(-135deg,#eff6ff_0%,#f5f3ff_30%,#cbd5e1_60%,#94a3b8)];
-  --color-app-text-color: #0a0a0a;
+  --color-app-bg: linear-gradient(-135deg, #eff6ff 0%, #f5f3ff 30%, #cbd5e1 60%, #94a3b8);
+  --color-header-bg: linear-gradient(135deg, #eff6ff,  #cbd5e1);
+  --color-app-text: #000000;
+  --color-input-bg: #e5e7eb;
+  --color-input-text: #1b1a1a;
+  --color-select-bg: #ffffff;
+  --color-select-text: #2d2d2d;
+  --color-option-bg: #ffffff;
+  --color-option-text: #374151;
+
+  --font-body: Inter, sans-serif;
 }
 
-@layer theme {
-  :root, :host {
-    @variant dark {
-      --color-app-bg: #0a0a0a;
-      --color-app-text-color: #ffffff;
-    }
-  }
+/* Override values for dark mode */
+.dark {
+  --color-app-bg: linear-gradient(-135deg, #0f172a 0%, #1e1b4b 30%, #334155 60%, #475569);
+  --color-header-bg: linear-gradient(135deg, #0f172a, #334155);
+  --color-app-text: #ffffff;
+  --color-input-bg: #374151;
+  --color-input-text: #f9fafb;
+  --color-select-bg: #1f2937;
+  --color-select-text: #f3f4f6;
+  --color-option-bg: #1f2937;
+  --color-option-text: #e5e7eb;
 }
+
+/* Global dark mode styles (outside @theme) */
+/* :root.dark {
+  color-scheme: dark;
+} */
 
 @layer base {
   body {
-    @apply text-black antialiased;
+    background: var(--color-app-bg);
+    color: var(--color-app-text);
+    font-family: var(--font-body);
+    @apply antialiased transition-colors duration-300;
   }
 
   button {
-    @apply cursor-pointer transition duration-200 ease-in-out transform active:scale-101 hover:brightness-110;
+    @apply cursor-pointer transition-all duration-200 ease-in-out transform active:scale-95 hover:brightness-110;
   }
 
   button:disabled {
-    @apply cursor-not-allowed opacity-70;
+    @apply cursor-not-allowed opacity-70 hover:brightness-100;
   }
 
   input {
-    @apply p-2 rounded-sm text-[#1b1a1a] bg-gray-200;
+    background-color: var(--color-input-bg);
+    color: var(--color-input-text);
+    @apply p-2 rounded-md transition-colors duration-200;
   }
 
   input:focus {
-    @apply outline-0 border-0 ring-2 ring-offset-2 ring-gray-600 ring-offset-white;
+    @apply outline-none ring-2 ring-offset-2 ring-blue-500 ring-offset-white dark:ring-blue-400 dark:ring-offset-gray-900;
   }
 
   select {
-    @apply p-2 rounded-sm bg-white text-[#2d2d2d] border-2 border-transparent min-w-24;
-  }
-
-  select:focus {
-    @apply outline-0 border-gray-100 ring-2 ring-gray-400;
+    background-color: var(--color-select-bg);
+    color: var(--color-select-text);
+    @apply p-2 rounded-md border-2 border-transparent min-w-24 transition-colors duration-200 focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-200 dark:focus:border-blue-600 dark:focus:ring-blue-800;
   }
 
   option {
-    @apply bg-white text-gray-800;
-  }
-
-  option:checked {
-    @apply bg-blue-100 text-blue-950;
-  }
-
-  option:hover {
-    /* Not all browsers support hover on <option> */
-    @apply bg-gray-100;
+    background-color: var(--color-option-bg);
+    color: var(--color-option-text);
+    @apply hover:bg-blue-50 dark:hover:bg-blue-900;
   }
 
   h1 {
-    @apply text-5xl font-bold;
+    @apply text-5xl font-bold transition-colors duration-200;
   }
 
   h2 {
-    @apply text-4xl font-semibold;
+    @apply text-4xl font-semibold transition-colors duration-200;
   }
 
   h3 {
-    @apply text-3xl font-semibold;
+    @apply text-3xl font-semibold transition-colors duration-200;
   }
 
   h4 {
-    @apply text-2xl font-medium;
+    @apply text-2xl font-medium transition-colors duration-200;
   }
 
   h5 {
-    @apply text-xl font-medium;
+    @apply text-xl font-medium transition-colors duration-200;
   }
 
   h6 {
-    @apply text-lg font-medium;
+    @apply text-lg font-medium transition-colors duration-200;
   }
 }
+
+/* Utility class for dark mode toggle */
+/* @layer utilities {
+  .theme-toggle {
+    @apply fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200;
+  }
+} */

@@ -39,8 +39,8 @@ const BackgroundChanger=() =>{
     }
 
     return (
-<div className={`page-contaier justify-end ${bgColor}`}>
-  <div className="inline-flex w-full justify-start md:justify-center overflow-x-auto gap-3 p-3 bg-white/80 rounded-t-md">
+<div className={`page-container relative ${bgColor}`}>
+  <div className="absolute bottom-0 left-0 right-0 flex items-center justify-start md:justify-center overflow-x-auto gap-3 p-3 bg-white/80 rounded-t-md">
     {colors.map((color, idx) => (
         <ColorButton key={idx} btnText={color} btnColor={color} btnClick={btnClick} selectedBg={bgColor}/>
     ))}
