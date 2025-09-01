@@ -6,13 +6,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { SquareArrowOutUpRight } from 'lucide-react';
 
 export default function ProjectCard(props) {
+  const navigate = useNavigate()
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea onClick={()=>navigate(props.link)}>
         <CardMedia
           component={props.bgUrl?"img":""}
           src={`${props.bgUrl}`}

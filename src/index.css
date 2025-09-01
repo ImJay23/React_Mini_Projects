@@ -53,7 +53,7 @@
     @apply p-2 rounded-md transition-colors duration-200 h-10;
   }
 
-  input:focus {
+  input:not([type="checkbox"], [type="radio"]):focus {
     @apply outline-none ring-2 ring-offset-2 ring-blue-500 ring-offset-white dark:ring-blue-400 dark:ring-offset-gray-900;
   }
   

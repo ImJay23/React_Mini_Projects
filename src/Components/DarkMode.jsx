@@ -42,7 +42,7 @@ const DarkMode = () => {
   return (
     <div className="flex items-center rounded-full border-gray-100 border-2 px-2 py-1 gap-1"> 
         {modeBtn?.map((item, idx)=>(
-            <button type='button' key={idx} className={`text-black dark:text-white border-2 bg-transparent ${theme === item.value ?"border-gray-100":" border-transparent"} rounded-full p-0.5`} onClick={()=>applyTheme(item.value)}>
+            <button type='button' key={idx} className={`text-black dark:text-white border-2 bg-transparent hover:border-gray-100 ${theme === item.value ?"border-gray-100":" border-transparent"} rounded-full p-0.5`} onClick={()=>applyTheme(item.value)}>
                 {<item.icon className="h-4"/>}
             </button>
         ))}
