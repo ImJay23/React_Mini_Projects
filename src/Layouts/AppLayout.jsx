@@ -5,11 +5,11 @@ import Header from "../Components/UI/Header"
 const AppLayout = () => {
     return (
         <>
-        <div className="min-h-screen overflow-x-hidden">
+        <div className="min-h-screen h-full min-w-screen overflow-x-hidden">
             <Header />
-            <div className="h-screen flex flex-col pt-16">
+            <main className="min-h-screen h-full flex flex-col pt-16">
                 <Outlet />
-            </div>
+            </main>
             <Footer />
         </div>
         </>
