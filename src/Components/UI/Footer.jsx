@@ -19,7 +19,7 @@ const Footer = ()=>{
                     <h5 className="text-white">Navigation</h5>
                     <nav className="flex items-start gap-2 mt-3 flex-col">
                         {footerNavLinks?.map((item,idx)=>(
-                            <NavLink className={({isActive})=>(`${isActive? 'underline':''} text-sm hover:underline`)} to={item.link} >{item.label}</NavLink>
+                            <NavLink key={idx} className={({isActive})=>(`${isActive? 'underline':''} text-sm hover:underline`)} to={item.link} >{item.label}</NavLink>
                         ))}
                     </nav>
                 </div>
@@ -27,7 +27,7 @@ const Footer = ()=>{
                     <h5 className="text-white">Projects</h5>
                     <nav className="flex items-start gap-2 mt-3 flex-col">
                         {projectLinks?.map((item,idx)=>(
-                            <NavLink className={({isActive})=>(`${isActive? 'underline':''} text-sm hover:underline`)} to={item.link} >{item.label}</NavLink>
+                            <NavLink key={idx} className={({isActive})=>(`${isActive? 'underline':''} text-sm hover:underline`)} to={item.link} >{item.label}</NavLink>
                         ))}
                     </nav>
                 </div>
