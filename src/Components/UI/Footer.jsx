@@ -9,6 +9,7 @@ const Footer = ()=>{
         {label: 'Currency Converter', link:"/currency-converter"},
         {label: 'Password Generator', link:"/password-generator"},
         {label: 'Background Changer', link:"/bg-changer"},
+        {label: 'Todos', link:"/todos"},
     ]
     return (
         <footer className="min-h-16 py-5 px-10 bg-cyan-950 text-gray-300">

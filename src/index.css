@@ -1,6 +1,7 @@
 @import "tailwindcss" important;
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(:not(.dark):not(.dark *)));
 
 @theme {
   --color-app-bg: linear-gradient(-135deg, #eff6ff 0%, #f5f3ff 30%, #cbd5e1 60%, #94a3b8);
@@ -51,6 +52,11 @@
     background-color: var(--color-input-bg);
     color: var(--color-input-text);
     @apply p-2 rounded-md transition-colors duration-200 h-10;
+  }
+
+  input:disabled{
+    user-select: none;
+    pointer-events: none;
   }
 
   input:is([type="checkbox"], [type="radio"]):hover{
