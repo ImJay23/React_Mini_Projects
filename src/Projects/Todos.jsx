@@ -16,7 +16,7 @@ const GenerateTodo = ({ item = {} }) => {
 
 
     return (
-        <div className="mt-4 flex gap-2 bg-gray-500 py-1 px-4 rounded-2xl">
+        <div className={`mt-4 flex gap-2 py-1 px-4 rounded-2xl ${item.isComplete? "bg-green-300":"bg-gray-500"}`}>
             <input
                 type="checkbox"
                 value={item.isComplete}
