@@ -77,17 +77,17 @@ const Todos = () => {
                 <div className="backdrop-blur-lg border-2 rounded-lg min-w-[320px] p-4">
                     <h1 className="p-5">Manage your Todos</h1>
                     <div className="max-h-[60vh] overflow-y-auto p-5 pt-1 relative backdrop-blur-md">
-                        <div className='input-wrapper sticky top-0 z-10 mt-4'>
+                        <form className='input-wrapper sticky top-0 z-10 mt-4' onSubmit={(e) => { e.preventDefault(); addTodo(newTodo) }}>
                             <input
                                 className='py-1 px-2 flex-1 h-full rounded-l-sm rounded-r-none focus:outline-0 light:bg-white'
                                 value={newTodo}
                                 onChange={(e) => setNewTodo(e.target.value)}
                                 placeholder='Todo...'
                             />
-                            <button onClick={() => addTodo(newTodo)} disabled={!newTodo} className='bg-green-600 text-white h-full px-2 rounded-r-sm'>
+                            <button type="submit" disabled={!newTodo} className='bg-green-600 text-white h-full px-2 rounded-r-sm'>
                                 Create Todo
                             </button>
-                        </div>
+                        </form>
                         {todos?.map((item) => (
                             <GenerateTodo key={item.id} item={item} />
                         ))}
